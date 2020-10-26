@@ -1,4 +1,4 @@
-# Applied-Data-Science-with-Python-Specialization
+# Introduction to Data Science in Python
 
 ## Functional Programming
 
@@ -42,7 +42,6 @@ for item in cheapest:
 
 Maps are iterable, just like lists and tuples, so we can use a for loop to look at all of the values in the map. This passing around of functions and data structures which they should be applied to, is a hallmark of functional programming. It's very common in data analysis and cleaning. 
 
-
 ### Example 1
 
 Here is a list of faculty. Can you write a function and apply it using `map()` to get a list of all faculty titles and last names (e.g. ['Dr. Brooks', 'Dr. Collins-Thompson', …]) ?
@@ -59,4 +58,56 @@ list(map(split_title_and_name, people))
 # ['Dr.Brooks', 'Dr.Collins-Thompson', 'Dr.Vydiswaran', 'Dr.Romero']
 ```
 
-## Lamdas - Anonymous Functions
+## Lambdas - Anonymous Functions
+
+Lambda's are Python's way of creating anonymous functions. These are the same as other functions, but they have no name. The intent is that they're simple or short lived and it's easier just to write out the function in one line instead of going to the trouble of creating a named function.
+
+Note that you can't have default values for lambda parameters and you can't have complex logic inside of the lambda itself because you're limited to a single expression. So lambdas are really much more limited than full function definitions. But they're very useful for simple little data cleaning tasks. 
+
+
+### Example 1 
+
+Convert the `split_title_and_name` into a lambda
+
+```python
+people = ['Dr. Christopher Brooks', 'Dr. Kevyn Collins-Thompson', 'Dr. VG Vinod Vydiswaran', 'Dr. Daniel Romero']
+
+def split_title_and_name(person):
+    return person.split()[0] + ' ' + person.split()[-1]
+
+#option 1
+for person in people:
+    print(split_title_and_name(person) == (lambda x: x.split()[0] + ' ' + x.split()[-1])(person))
+
+#option 2
+list(map(split_title_and_name, people)) == list(map(lambda person: person.split()[0] + ' ' + person.split()[-1], people))
+
+# True
+# True
+# True
+# True
+# True
+```
+
+### Resources
+
+https://stackoverflow.com/questions/13669252/what-is-key-lambda
+
+##  list comprehension 
+
+
+
+### Example 1
+
+Why don’t you try converting a function into a list comprehension.
+
+```python
+def times_tables():
+    lst = []
+    for i in range(10):
+        for j in range (10):
+            lst.append(i*j)
+    return lst
+
+times_tables() == [j*i for i in range(10) for j in range(10)]
+```
