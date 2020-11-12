@@ -132,3 +132,187 @@ correct_answer[:50] # Display first 50 ids
 ### Resources
 
 https://www.geeksforgeeks.org/nested-list-comprehensions-in-python/#:~:text=It%20is%20a%20smart%20and,similar%20to%20nested%20for%20loops.
+
+
+## Quiz
+
+### Q1
+
+What will be the output of the following code?
+
+```python
+import re
+string = 'bat, lat, mat, bet, let, met, bit, lit, mit, bot, lot, mot'
+result = re.findall('b[ao]t', string)
+print(result)
+
+# ['bat', 'bot']
+```
+
+- [ ] ['bat', 'bot']
+- [ ] bat, bet, bit, bot'
+- [x] 'bat, bot'
+- [ ] 'bat', 'bet', 'bit', 'bot']
+
+### Q2
+
+What will be the output of the following code?
+
+```python
+import re
+string = 'bat, lat, mat, bet, let, met, bit, lit, mit, bot, lot, mot'
+result = re.findall('b[ao]t', string)
+print(result)
+
+# ['bat', 'bot']
+```
+
+- [ ] ['bat', 'bot']
+- [ ] bat, bet, bit, bot'
+- [x] 'bat, bot'
+- [ ] 'bat', 'bet', 'bit', 'bot']
+
+### Q3
+
+What will be the output of the following code?
+
+```python
+import re
+string = 'bat, lat, mat, bet, let, met, bit, lit, mit, bot, lot, mot'
+result = re.findall('b[ao]t', string)
+print(result)
+
+# ['bat', 'bot']
+```
+
+- [ ] ['bat', 'bot']
+- [ ] bat, bet, bit, bot'
+- [x] 'bat, bot'
+- [ ] 'bat', 'bet', 'bit', 'bot']
+
+### Q4
+
+What will be the output of the following code?
+
+```python
+import re
+string = 'bat, lat, mat, bet, let, met, bit, lit, mit, bot, lot, mot'
+result = re.findall('b[ao]t', string)
+print(result)
+
+# ['bat', 'bot']
+```
+
+- [ ] ['bat', 'bot']
+- [ ] bat, bet, bit, bot'
+- [x] 'bat, bot'
+- [ ] 'bat', 'bet', 'bit', 'bot']
+
+### Q5
+
+What will be the output of the following code?
+
+```python
+import re
+string = 'bat, lat, mat, bet, let, met, bit, lit, mit, bot, lot, mot'
+result = re.findall('b[ao]t', string)
+print(result)
+
+# ['bat', 'bot']
+```
+
+- [ ] ['bat', 'bot']
+- [ ] bat, bet, bit, bot'
+- [x] 'bat, bot'
+- [ ] 'bat', 'bet', 'bit', 'bot']
+
+### Q6
+
+What will be the output of the following code?
+
+```python
+import re
+string = 'bat, lat, mat, bet, let, met, bit, lit, mit, bot, lot, mot'
+result = re.findall('b[ao]t', string)
+print(result)
+
+# ['bat', 'bot']
+```
+
+- [ ] ['bat', 'bot']
+- [ ] bat, bet, bit, bot'
+- [x] 'bat, bot'
+- [ ] 'bat', 'bet', 'bit', 'bot']
+
+### Q7
+
+What will be the output of the following code?
+
+```python
+import re
+string = 'bat, lat, mat, bet, let, met, bit, lit, mit, bot, lot, mot'
+result = re.findall('b[ao]t', string)
+print(result)
+
+# ['bat', 'bot']
+```
+
+- [ ] ['bat', 'bot']
+- [ ] bat, bet, bit, bot'
+- [x] 'bat, bot'
+- [ ] 'bat', 'bet', 'bit', 'bot']
+
+### Q8
+
+What will be the output of the following code?
+
+```python
+import re
+string = 'bat, lat, mat, bet, let, met, bit, lit, mit, bot, lot, mot'
+result = re.findall('b[ao]t', string)
+print(result)
+
+# ['bat', 'bot']
+```
+
+- [ ] ['bat', 'bot']
+- [ ] bat, bet, bit, bot'
+- [x] 'bat, bot'
+- [ ] 'bat', 'bet', 'bit', 'bot']
+
+### Q9
+
+What will be the output of the following code?
+
+```python
+import re
+string = 'bat, lat, mat, bet, let, met, bit, lit, mit, bot, lot, mot'
+result = re.findall('b[ao]t', string)
+print(result)
+
+# ['bat', 'bot']
+```
+
+- [ ] ['bat', 'bot']
+- [ ] bat, bet, bit, bot'
+- [x] 'bat, bot'
+- [ ] 'bat', 'bet', 'bit', 'bot']
+
+### Q10
+
+What will be the output of the following code?
+
+```python
+import re
+string = 'bat, lat, mat, bet, let, met, bit, lit, mit, bot, lot, mot'
+result = re.findall('b[ao]t', string)
+print(result)
+
+# ['bat', 'bot']
+```
+
+- [ ] ['bat', 'bot']
+- [ ] bat, bet, bit, bot'
+- [x] 'bat, bot'
+- [ ] 'bat', 'bet', 'bit', 'bot']
+
