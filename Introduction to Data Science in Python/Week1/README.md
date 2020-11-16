@@ -156,163 +156,169 @@ print(result)
 
 ### Q2
 
-What will be the output of the following code?
+![alt text](https://mcq-s3-bucket.s3.amazonaws.com/static/week1/images/quiz/quiz1_q1.png "Euclidian Distance")
+
+Assume `a` and `b` are two (20, 20) numpy arrays. The L2-distance (defined above) between two equal dimension arrays can be calculated in python as follows:
+
 
 ```python
-import re
-string = 'bat, lat, mat, bet, let, met, bit, lit, mit, bot, lot, mot'
-result = re.findall('b[ao]t', string)
-print(result)
-
-# ['bat', 'bot']
+def l2_dist(a, b):
+    result = ((a - b) * (a - b)).sum()
+    result = result ** 0.5
+    return result
 ```
 
-- [ ] ['bat', 'bot']
-- [ ] bat, bet, bit, bot'
-- [x] 'bat, bot'
-- [ ] 'bat', 'bet', 'bit', 'bot']
+Which of the following expressions using this function will **give an error?**
+
+```python
+a = np.random.rand(20,20)
+b = np.random.rand(20,20)
+```
+
+- [x] l2_dist(np.reshape(a, (20 * 20)), np.reshape(b, (20 * 20, 1)))
+- [ ] l2_dist(np.reshape(a, (20 * 20)), np.reshape(b, (20 * 20)))
+- [ ] l2_dist(a, b)
+- [ ] l2_dist(a.T, b.T)
 
 ### Q3
 
-What will be the output of the following code?
+Consider the following variables in Python:
 
 ```python
-import re
-string = 'bat, lat, mat, bet, let, met, bit, lit, mit, bot, lot, mot'
-result = re.findall('b[ao]t', string)
-print(result)
-
-# ['bat', 'bot']
+a1 = np.random.rand(4)
+a2 = np.random.rand(4, 1)
+a3 = np.array([[1, 2, 3, 4]])
+a4 = np.arange(1, 4, 1)
+a5 = np.linspace(1 ,4, 4)
 ```
 
-- [ ] ['bat', 'bot']
-- [ ] bat, bet, bit, bot'
-- [x] 'bat, bot'
-- [ ] 'bat', 'bet', 'bit', 'bot']
+Which of the following statements regarding these variables is correct?
+
+
+- [ ] a3.shape == a4.shape
+- [ ] a1.shape == a2.shape
+- [x] a5.shape == a1.shape
+- [ ] a4.ndim() == 1
 
 ### Q4
 
-What will be the output of the following code?
+Which of the following is the correct output for the code given below?
 
 ```python
-import re
-string = 'bat, lat, mat, bet, let, met, bit, lit, mit, bot, lot, mot'
-result = re.findall('b[ao]t', string)
-print(result)
+import numpy as np
 
-# ['bat', 'bot']
+old = np.array([[1, 1, 1], [1, 1, 1]])
+new = old
+new[0, :2] = 0
+print(old)
 ```
 
-- [ ] ['bat', 'bot']
-- [ ] bat, bet, bit, bot'
-- [x] 'bat, bot'
-- [ ] 'bat', 'bet', 'bit', 'bot']
+- [ ] [[1 1 1][1 1 1]]
+- [x] [[0 0 1][1 1 1]]
+- [ ] [[0 1 1][0 1 1]]
+- [ ] [1 1 0][1 1 0]]
 
 ### Q5
 
-What will be the output of the following code?
+Given the 6x6 NumPy array r shown below, which of the following options would slice the shaded elements?
+
+![alt text](https://mcq-s3-bucket.s3.amazonaws.com/static/week1/images/quiz/quiz1_q4.png"6x6 array")
 
 ```python
-import re
-string = 'bat, lat, mat, bet, let, met, bit, lit, mit, bot, lot, mot'
-result = re.findall('b[ao]t', string)
-print(result)
-
-# ['bat', 'bot']
+r = np.arange(0,36).reshape(6,6)
 ```
 
-- [ ] ['bat', 'bot']
-- [ ] bat, bet, bit, bot'
-- [x] 'bat, bot'
-- [ ] 'bat', 'bet', 'bit', 'bot']
+- [ ] r[[2,4],[2,4]]
+- [ ] r[[2,3],[2,3]]
+- [ ] r[2:3,2:3]
+- [x] r[2:4,2:4]
 
 ### Q6
 
-What will be the output of the following code?
-
 ```python
 import re
-string = 'bat, lat, mat, bet, let, met, bit, lit, mit, bot, lot, mot'
-result = re.findall('b[ao]t', string)
-print(result)
-
-# ['bat', 'bot']
+s = 'ACBCAC'
 ```
 
-- [ ] ['bat', 'bot']
-- [ ] bat, bet, bit, bot'
-- [x] 'bat, bot'
-- [ ] 'bat', 'bet', 'bit', 'bot']
+For the given string, which of the following regular expressions can be used to check if the string starts with 'AC'?
+
+- [ ] re.findall('[^A]C', s)
+- [ ] re.findall('^[AC]', s)
+- [x] re.findall('^AC', s)
+- [ ] re.findall('AC', s)
 
 ### Q7
 
-What will be the output of the following code?
+What will be the output of the variable `L` after the following code is executed?
+
 
 ```python
 import re
-string = 'bat, lat, mat, bet, let, met, bit, lit, mit, bot, lot, mot'
-result = re.findall('b[ao]t', string)
-print(result)
 
-# ['bat', 'bot']
+s = 'ACAABAACAAAB'
+result = re.findall('A{1,2}', s)
+L = len(result)
 ```
 
-- [ ] ['bat', 'bot']
-- [ ] bat, bet, bit, bot'
-- [x] 'bat, bot'
-- [ ] 'bat', 'bet', 'bit', 'bot']
+- [ ] 8
+- [x] 5
+- [ ] 12
+- [ ] 4
 
 ### Q8
 
-What will be the output of the following code?
+Which of the following is the correct regular expression to extract all the phone numbers from the following chunk of text:
 
 ```python
-import re
-string = 'bat, lat, mat, bet, let, met, bit, lit, mit, bot, lot, mot'
-result = re.findall('b[ao]t', string)
-print(result)
+"""
+Office of Research Administration: (734) 647-6333 | 4325 North Quad
+Office of Budget and Financial Administration: (734) 647-8044 | 309 Maynard, Suite 205
+Health Informatics Program: (734) 763-2285 | 333 Maynard, Suite 500
+Office of the Dean: (734) 647-3576 | 4322 North Quad
+UMSI Engagement Center: (734) 763-1251 | 777 North University
+Faculty Adminstrative Support Staff: (734) 764-9376 | 4322 North Quad
+"""
 
-# ['bat', 'bot']
+# ['(734) 647-6333', '(734) 647-8044', '(734) 763-2285', '(734) 647-3576', '(734) 763-1251', '(734) 764-9376']
 ```
 
-- [ ] ['bat', 'bot']
-- [ ] bat, bet, bit, bot'
-- [x] 'bat, bot'
-- [ ] 'bat', 'bet', 'bit', 'bot']
+- [x] pattern1 = "[(]\d{3}[)]\s\d{3}[-]\d{4}"
+- [ ] pattern2 = "[(]\d{3}[)]\d{3}[-]\d{4}"
+- [ ] pattern3 = "\d{3}[-]\d{3}[-]\d{4}"
+- [ ] pattern4 = "\d{3}\s\d{3}[-]\d{4}"
 
 ### Q9
 
-What will be the output of the following code?
+Which of the following regular expressions can be used to get the domain names (e.g. google.com, www.baidu.com) from the following sentence?
 
 ```python
-import re
-string = 'bat, lat, mat, bet, let, met, bit, lit, mit, bot, lot, mot'
-result = re.findall('b[ao]t', string)
-print(result)
-
-# ['bat', 'bot']
+'I refer to https://google.com and I never refer http://www.baidu.com if I have to search anything'
 ```
 
-- [ ] ['bat', 'bot']
-- [ ] bat, bet, bit, bot'
-- [x] 'bat, bot'
-- [ ] 'bat', 'bet', 'bit', 'bot']
+- [ ] pattern1 = "(?<=https:\/\/)([A-Za-z0-9.]*)"
+- [ ] pattern2 = "(?<=https:\/\/)([.]*)"
+- [x] pattern3 = "(?<=[https]:\/\/)([A-Za-z0-9.]*)"
+- [ ] pattern4 = "(?<=https:\/\/)([A-Za-z0-9]*)"
 
 ### Q10
 
-What will be the output of the following code?
+The text from the Canadian Charter of Rights and Freedoms section 2 lists the fundamental freedoms afforded to everyone. Of the four choices provided to replace X in the code below, which would accurately count the number of fundamental freedoms that Canadians have?
 
 ```python
-import re
-string = 'bat, lat, mat, bet, let, met, bit, lit, mit, bot, lot, mot'
-result = re.findall('b[ao]t', string)
-print(result)
+text=r'''Everyone has the following fundamental freedoms:
+(a) freedom of conscience and religion;
+(b) freedom of thought, belief, opinion and expression, including freedom of the press and other media of communication;
+(c) freedom of peaceful assembly; and
+(d) freedom of association.'''
 
-# ['bat', 'bot']
+import re
+
+pattern = X
+print(len(re.findall(pattern,text)))
 ```
 
-- [ ] ['bat', 'bot']
-- [ ] bat, bet, bit, bot'
-- [x] 'bat, bot'
-- [ ] 'bat', 'bet', 'bit', 'bot']
+- [ ] pattern1 = '[a-d]'
+- [x] pattern2 = 'freedom'
+- [ ] pattern3 = '\(.\) '
+- [ ] pattern4 = '(.)'
 
