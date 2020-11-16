@@ -222,7 +222,7 @@ print(old)
 
 Given the 6x6 NumPy array r shown below, which of the following options would slice the shaded elements?
 
-![alt text](https://mcq-s3-bucket.s3.amazonaws.com/static/week1/images/quiz/quiz1_q4.png"6x6 array")
+![alt text](https://mcq-s3-bucket.s3.amazonaws.com/static/week1/images/quiz/quiz1_q4.png "6x6array")
 
 ```python
 r = np.arange(0,36).reshape(6,6)
@@ -318,7 +318,7 @@ print(len(re.findall(pattern,text)))
 ```
 
 - [ ] pattern1 = '[a-d]'
-- [x] pattern2 = 'freedom'
-- [ ] pattern3 = '\(.\) '
+- [ ] pattern2 = 'freedom'
+- [x] pattern3 = '\(.\) '
 - [ ] pattern4 = '(.)'
 
