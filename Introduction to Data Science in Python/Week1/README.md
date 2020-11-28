@@ -322,3 +322,11 @@ print(len(re.findall(pattern,text)))
 - [x] pattern3 = '\(.\) '
 - [ ] pattern4 = '(.)'
 
+## Regular Expression Operations documentation
+
+https://docs.python.org/3/library/re.html
+
+## Regular Expressions Debugging
+
+When working on the assignments or other regular expressions problems it's handy to use regex debug tools 
+available on the web. www.regex101.com allows you to change the specific format of the regex to Python.
